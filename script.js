@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let registros = await response.json();
     
         let tbody = listaRegistrosDiv.querySelector("tbody");
-        tbody.innerHTML = ""; // Limpia el cuerpo de la tabla antes de actualizar
+        tbody.innerHTML = "";
     
         registros.forEach(registro => {
           let row = tbody.insertRow();
@@ -90,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     }
   
-    mostrarListaRegistros(); // Llama a la función una vez al cargar la página
+    mostrarListaRegistros();
+    setInterval(mostrarListaRegistros, 1500); // Actualiza cada 1.5 segundos
   });
   
