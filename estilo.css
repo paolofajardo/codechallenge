@@ -1,0 +1,9 @@
+.eliminarBtn {
+    width: 20px;
+    height: 20px;
+	transition: transform 0.3s; /* transición suave */
+  }
+  
+.eliminarBtn:hover {
+  transform: scale(1.1); /* Aumenta el tamaño al 110% al pasar el mouse por encima */
+}
