@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
       };
   
       try {
-        let response = await fetch("https://crudcrud.com/api/adc54d7744e946cd8ffc1851accabb6d/pruebas", {
+        let response = await fetch("https://crudcrud.com/api/adc54d7744e946cd8ffc1851accabb6d/grupo265", {
           headers: {
             "Content-Type": "application/json; charset=utf-8"
           },
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
     async function mostrarListaRegistros() {
       try {
-        let response = await fetch("https://crudcrud.com/api/adc54d7744e946cd8ffc1851accabb6d/pruebas");
+        let response = await fetch("https://crudcrud.com/api/adc54d7744e946cd8ffc1851accabb6d/grupo265");
         let registros = await response.json();
     
         let tbody = listaRegistrosDiv.querySelector("tbody");
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
     async function eliminarRegistro(registroId) {
       try {
-        let response = await fetch(`https://crudcrud.com/api/adc54d7744e946cd8ffc1851accabb6d/pruebas/${registroId}`, {
+        let response = await fetch(`https://crudcrud.com/api/adc54d7744e946cd8ffc1851accabb6d/grupo265/${registroId}`, {
           method: "DELETE"
         });
   
