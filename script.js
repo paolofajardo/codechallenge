@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
       let sala = document.getElementById("sala").value;
   
       let data = {
-        name: nombre,
+        nombre: nombre,
         apellido: apellido,
         grupo: grupo,
         sala: sala
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
           let row = tbody.insertRow();
           
           let nombreCell = row.insertCell();
-          nombreCell.textContent = registro.name;
+          nombreCell.textContent = registro.nombre;
     
           let apellidoCell = row.insertCell();
           apellidoCell.textContent = registro.apellido;
