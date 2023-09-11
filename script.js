@@ -39,6 +39,9 @@ document.addEventListener("DOMContentLoaded", function() {
         let response = await fetch("https://crudcrud.com/api/adc54d7744e946cd8ffc1851accabb6d/grupo265");
         let registros = await response.json();
     
+        // Omitimos el primer elemento del array usando slice(1)
+        registros = registros.slice(1);
+    
         let tbody = listaRegistrosDiv.querySelector("tbody");
         tbody.innerHTML = "";
     
@@ -58,12 +61,12 @@ document.addEventListener("DOMContentLoaded", function() {
           salaCell.textContent = registro.sala;
     
           let accionesCell = row.insertCell();
-          
+    
           let eliminarBtn = document.createElement("img");
           eliminarBtn.src = "imagen.png";
           eliminarBtn.classList.add("eliminarBtn");
           eliminarBtn.addEventListener("click", async () => await eliminarRegistro(registro._id));
-          
+    
           accionesCell.appendChild(eliminarBtn);
         });
     
@@ -71,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("Error al obtener la lista de registros:", error);
       }
     }
+    
   
     async function eliminarRegistro(registroId) {
       try {
